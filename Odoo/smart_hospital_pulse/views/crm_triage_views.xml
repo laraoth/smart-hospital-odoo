@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="crm_lead_pulse_form_view" model="ir.ui.view">
+
+        <field name="name">crm.lead.pulse.form</field>
+        <field name="model">crm.lead</field>
+
+       
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+
+        <field name="arch" type="xml">
+
+           
+            <xpath expr="//sheet" position="inside">
+
+                <group string="Patient Monitoring">
+
+                
+                    <field name="patient_heart_rate"
+                           string="Patient Heart Rate (BPM)"/>
+
+                  
+                    <field name="is_critical_iot_alert"
+                           string="Critical IoT Alert"
+                           widget="boolean"/>
+
+                </group>
+
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
